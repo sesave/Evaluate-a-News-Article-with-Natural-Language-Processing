@@ -2,15 +2,15 @@ function handleSubmit(event) {
   event.preventDefault();
 
   // check what text was put into the form field
-  let formText = document.getElementById("name").value;
-  Client.checkForName(formText);
-
-  console.log("::: Form has been Submitted :::");
+  let formTextValue = document.getElementById("name").value;
+  if (!formTextValue) return;
+  Client.checkForName(formTextValue);
   let reqBody = {
-    theText: formText,
+    text: formTextValue,
   };
+  console.log("::: Form has been Submitted :::");
 
-  fetch("/testing", {
+  fetch("http://localhost:8080/textApi", {
     method: "POST",
     body: JSON.stringify(reqBody),
     headers: { "Content-Type": "application/json" },
@@ -19,7 +19,9 @@ function handleSubmit(event) {
     .then(function (res) {
       document.getElementById("results").innerHTML = res.polarity;
       console.log(res);
-      alert(dataText);
+    })
+    .catch(function (error) {
+      console.log(error.message);
     });
 }
 
