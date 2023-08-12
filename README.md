@@ -1,18 +1,44 @@
 # Evaluate a News Article with Natural Language Processing
 
+Project done for Udacity Front-end Developer Nanodegree.
+
+MonoRepo Architecture
+
+Approved as a valid project.
+
 ## Instructions 
 
-- `npm install` to install all the dependencies
-- `npm run build-prod` to create and optimized code
-- `npm run start` if you want to start the server with the prod code
-- `npm run build-dev` to run it in development mode
+To install the dependencies
+```
+npm install
+```
 
-## Techs used
+Create your .env file 
 
-- Express for back-end
-- SASS for styling
-- NPM for dependencies
-- Webpack for bundling
+To create and optimized code
+```
+npm run build-prod
+```
+
+Run the server
+```
+npm run start
+```
+
+To run it in development mode
+```
+npm run build-dev
+```
+
+## Stack
+
+- HTML/CSS
+- Javascript
+- NodeJS
+  - Express
+- SASS
+- NPM
+- Webpack
 
 ## Author 
 
